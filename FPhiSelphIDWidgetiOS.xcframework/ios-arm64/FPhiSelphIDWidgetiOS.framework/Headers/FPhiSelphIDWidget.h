@@ -5,49 +5,25 @@
 #import <CoreVideo/CoreVideo.h>
 #import <CoreMedia/CoreMedia.h>
 #import <CoreText/CoreText.h>
+
 #import "FPhiSelphIDWidgetExtractionData.h"
+#import "FPhiSelphIDGraphProtocol.h"
+#import "FPhiSelphIDWidgetDocumentSide.h"
+#import "FPhiSelphIDWidgetDocumentType.h"
 
-#import "FPhiGraph.h"
-
-typedef NS_ENUM(NSUInteger, FPhiSelphIDWidgetDocumentType) {
-    
-    DTIDCard,
-
-    DTPassport,
-    
-    DTDriversLicense,
-
-    DTForeignCard,
-    
-    DTCreditCard,
-
-    DTCustom,
-};
-
-typedef NS_ENUM(NSUInteger, FPhiSelphIDWidgetDocumentSide) {
-    
-    DSFront,
-
-    DSBack,
-};
+#import "IFPhiDocumentExtractor.h"
 
 
 typedef NS_ENUM(NSUInteger, FPhiSelphIDWidgetScanMode) {
-    
     SMGeneric,
-    
     SMSpecific,
-
     SMSearch,
 };
 
 
 typedef NS_ENUM(NSUInteger, FPhiSelphIDWidgetTimeout) {
-    
     TShort,
-    
     TMedium,
-
     TLong,
 };
 
@@ -63,6 +39,9 @@ typedef NS_ENUM(NSUInteger, FPhiSelphIDWidgetTimeout) {
 @property (nonatomic) FPhiSelphIDWidgetScanMode scanMode;
 @property (nonatomic) NSString* specificData;
 
+// Front documentExtractor
+@property (nonatomic) IFPhiDocumentExtractor *frontDocumentExtractor;
+
 // Widget flags
 @property (nonatomic) bool wizardMode;
 @property (nonatomic) bool showAfterCapture;
@@ -77,8 +56,6 @@ typedef NS_ENUM(NSUInteger, FPhiSelphIDWidgetTimeout) {
 
 // Widget configurations
 @property (nonatomic) NSString *tokenPreviousCaptureData;
-
-@property (nonatomic) FPBSelphIDDocumentRawData *tokenizer;
 
 @property (nonatomic) NSString* license;
 
@@ -168,5 +145,11 @@ typedef NS_ENUM(NSUInteger, FPhiSelphIDWidgetTimeout) {
  Parameter compressionQuality: Range [0..1]
  */
 +(NSData *)JPGRepresentationFromImage :(UIImage *)img :(CGFloat)compressionQuality;
+
+/**
+ It retrieves the widget's version
+*/
++(NSString *)widgetVersion;
+
 
 @end

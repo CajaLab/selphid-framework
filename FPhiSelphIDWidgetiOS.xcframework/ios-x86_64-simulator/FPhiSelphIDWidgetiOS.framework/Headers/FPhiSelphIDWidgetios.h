@@ -13,15 +13,3 @@ FOUNDATION_EXPORT const unsigned char FPhiSelphIDiosVersionString[];
 #import <FPhiSelphIDWidgetiOS/FPhiSelphIDWidgetExtractionData.h>
 #import <FPhiSelphIDWidgetiOS/FPhiSelphIDFrameObj.h>
 #import <FPhiSelphIDWidgetiOS/FPhiSelphIDError.h>
-#import <FPhiSelphIDWidgetiOS/FPhiSelphIDResourceManager.h>
-#import <FPhiSelphIDWidgetiOS/FPhiSelphIDDocumentManager.h>
-#import <FPhiSelphIDWidgetiOS/FPhiSelphID+undocumentedProperties.h>
-#import <FPhiSelphIDWidgetiOS/FPhiSelphIDSetupLoader.h>
-#import <FPhiSelphIDWidgetiOS/FPhiSelphID_Custom.h>
-#import <FPhiSelphIDWidgetiOS/FPhiSelphIDDocumentLoader.h>
-#import <FPhiSelphIDWidgetiOS/FPhiSelphIDEasing.h>
-#import <FPhiSelphIDWidgetiOS/FPhiSelphIDML.h>
-#import <FPhiSelphIDWidgetiOS/FPhiSelphIDOCRTextInfo.h>
-#import <FPhiSelphIDWidgetiOS/FPhiSelphIDOCRVM.h>
-
-#import <FPhiSelphIDWidgetiOS/FPhiGraph.h>

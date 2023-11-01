@@ -4,7 +4,7 @@
 /**
     Set of behavior that is expected of an object in a given situation
  */
-@protocol FPhiSelphIDWidgetProtocol <NSObject>
+@protocol FPhiSelphIDWidgetProtocol
 
 /**
     Invoked when the extraction process is finished.
